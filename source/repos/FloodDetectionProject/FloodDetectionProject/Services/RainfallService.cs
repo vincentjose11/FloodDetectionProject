@@ -56,11 +56,12 @@ namespace FloodDetectionApp.Services
                 if (readings.Any(r => r.Rainfall > 30) || avg >= 15)
                     return "Red";
 
-                else if (avg >= 10)
-                    return "Amber";
-
                 else if (avg < 10)
                     return "Green";
+
+                else if (avg < 15)
+                    return "Amber";
+
                 else
                     return "Invalid Data";
             }
